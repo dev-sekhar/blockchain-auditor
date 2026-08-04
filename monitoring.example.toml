@@ -1,0 +1,22 @@
+[[rules]]
+id = "unexpected-upgrade"
+type = "contract_upgrade"
+severity = "critical"
+allowed_implementations = ["0xApprovedImplementation"]
+
+[[rules]]
+id = "large-treasury-transfer"
+type = "treasury_transfer"
+severity = "high"
+min_amount = 1000000
+
+[[rules]]
+id = "governance-execution"
+type = "governance_execution"
+severity = "medium"
+
+[[rules]]
+id = "stale-oracle"
+type = "oracle_staleness"
+severity = "high"
+max_age_seconds = 3600

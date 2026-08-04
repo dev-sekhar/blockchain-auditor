@@ -1,0 +1,31 @@
+rules:
+  - id: blockchain-auditor.solidity.tx-origin
+    languages: [solidity]
+    severity: ERROR
+    message: Do not use tx.origin for authorization; use msg.sender and explicit access control.
+    pattern: tx.origin
+    metadata:
+      category: security
+      confidence: HIGH
+      references:
+        - https://swcregistry.io/docs/SWC-115/
+
+  - id: blockchain-auditor.solidity.selfdestruct
+    languages: [solidity]
+    severity: WARNING
+    message: Review destructive contract lifecycle behavior and its effect on integrations and assets.
+    pattern-either:
+      - pattern: selfdestruct(...)
+      - pattern: suicide(...)
+    metadata:
+      category: security
+      confidence: HIGH
+
+  - id: blockchain-auditor.solidity.delegatecall
+    languages: [solidity]
+    severity: WARNING
+    message: Ensure the delegatecall target is trusted and storage layouts remain compatible.
+    pattern: $TARGET.delegatecall(...)
+    metadata:
+      category: security
+      confidence: MEDIUM

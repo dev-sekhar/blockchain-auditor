@@ -1,0 +1,5 @@
+[[rules]]
+id = "unexpected-upgrade"
+type = "contract_upgrade"
+severity = "critical"
+allowed_implementations = ["0xApproved"]

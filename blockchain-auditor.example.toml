@@ -1,0 +1,25 @@
+[audit]
+profile = "solidity"
+execution_mode = "container"
+engines = ["builtin", "semgrep", "slither"]
+dynamic_tests = false
+allow_native_execution = false
+timeout_seconds = 300
+max_memory = "2g"
+max_cpus = "2"
+suppression_file = ".blockchain-auditor-suppressions.json"
+fail_on = "high"
+formal_verification = false
+properties_file = "audit-properties.toml"
+require_property_proofs = false
+economic_simulation = false
+scenarios_file = "audit-scenarios.toml"
+monitoring_file = "monitoring.toml"
+compliance_frameworks = ["OWASP-SC", "SOC2", "ISO27001"]
+
+# Pin these to an immutable digest in production.
+semgrep_image = "semgrep/semgrep:1.128.0"
+slither_image = "trailofbits/eth-security-toolbox:0.12.0"
+foundry_image = "ghcr.io/foundry-rs/foundry:v1.3.1"
+# Set to a reviewed, digest-pinned image before using the assurance profile.
+# solc_image = "ethereum/solc@sha256:replace-with-approved-digest"

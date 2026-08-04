@@ -1,0 +1,35 @@
+name: Blockchain audit
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install auditor
+        run: python -m pip install '.[dev]'
+      - name: Unit tests and coverage gate
+        run: |
+          coverage run --source=blockchain_auditor.backend,blockchain_auditor.api,blockchain_auditor.plugins,blockchain_auditor.verification,blockchain_auditor.simulation,blockchain_auditor.monitoring,blockchain_auditor.security,blockchain_auditor.copilot,blockchain_auditor.services -m unittest discover -s tests -v
+          coverage report --fail-under=70
+      # Pull only images reviewed and pinned by your organization.
+      - name: Run audit
+        env:
+          BLOCKCHAIN_AUDITOR_SIGNING_KEY: ${{ secrets.AUDIT_SIGNING_KEY }}
+        run: blockchain-auditor audit . --config blockchain-auditor.example.toml --ci --output audit-reports
+      - name: Upload audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: blockchain-audit
+          path: audit-reports/

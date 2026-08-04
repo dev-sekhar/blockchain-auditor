@@ -1,0 +1,7 @@
+[
+  {"id":"access-control-caller","text":"Access control and authorization should normally bind to the immediate caller and explicit roles. Transaction-origin checks can be confused by intermediary contracts."},
+  {"id":"reentrancy-state-order","text":"External calls can transfer control. Update critical state before interaction where possible and use a reentrancy guard when the invariant spans external execution."},
+  {"id":"oracle-freshness","text":"Oracle consumers should validate freshness, expected update cadence, fallback behavior, and the economic effect of manipulation or delay."},
+  {"id":"upgrade-boundary","text":"Upgradeable systems must constrain implementation selection, protect upgrade authority, preserve storage layout, and make upgrade events observable."},
+  {"id":"bridge-quorum","text":"Bridge security depends on message-domain separation, replay protection, verifier correctness, and a quorum that remains safe under validator compromise."}
+]

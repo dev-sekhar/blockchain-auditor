@@ -1,0 +1,27 @@
+services:
+  auditor:
+    build:
+      context: ..
+    ports:
+      - "127.0.0.1:8765:8765"
+    environment:
+      BLOCKCHAIN_AUDITOR_BOOTSTRAP_TOKEN: "${BLOCKCHAIN_AUDITOR_BOOTSTRAP_TOKEN:?required}"
+      BLOCKCHAIN_AUDITOR_TENANT_ID: "${BLOCKCHAIN_AUDITOR_TENANT_ID:?required}"
+    volumes:
+      - auditor-data:/app/.audit-reports
+      - "${AUDIT_PROJECTS_PATH:?required}:/workspace/projects:ro"
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8765/readyz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  auditor-data:

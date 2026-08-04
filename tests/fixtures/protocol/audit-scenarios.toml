@@ -1,0 +1,7 @@
+[[scenarios]]
+id = "oracle-crash"
+type = "oracle_shock"
+collateral_value = 100
+debt = 70
+liquidation_threshold = 0.8
+shock_pct = 30

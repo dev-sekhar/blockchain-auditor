@@ -1,0 +1,16 @@
+[[properties]]
+id = "vault-accounting-conservation"
+description = "Total recorded assets must cover all user claims after every state transition."
+severity = "critical"
+language = "Solidity"
+kind = "smt-assertion"
+source_file = "src/Vault.sol"
+source_line = 120
+expression = "totalAssets >= totalClaims"
+
+[[properties]]
+id = "owner-cannot-mint-unbounded"
+description = "Privileged roles must not bypass the configured token supply cap."
+severity = "high"
+language = "Solidity"
+kind = "design-invariant"

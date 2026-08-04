@@ -1,0 +1,10 @@
+{
+  "cases": [
+    {
+      "id": "critical-findings",
+      "question": "What are the critical security findings?",
+      "expected_finding_ids": [],
+      "minimum_recall": 1.0
+    }
+  ]
+}

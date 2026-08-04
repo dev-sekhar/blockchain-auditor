@@ -1,0 +1,29 @@
+[[scenarios]]
+id = "large-amm-swap"
+type = "amm_swap"
+reserve_in = 1000000
+reserve_out = 1000000
+amount_in = 250000
+fee_bps = 30
+max_price_impact_pct = 10
+
+[[scenarios]]
+id = "collateral-crash"
+type = "oracle_shock"
+collateral_value = 1500000
+debt = 900000
+liquidation_threshold = 0.8
+shock_pct = 35
+
+[[scenarios]]
+id = "governance-capture"
+type = "governance_concentration"
+voting_shares = [40, 25, 20, 15]
+max_holder_pct = 33.34
+
+[[scenarios]]
+id = "bridge-validator-loss"
+type = "bridge_quorum"
+validators = 9
+signature_threshold = 6
+compromised_validators = 6
