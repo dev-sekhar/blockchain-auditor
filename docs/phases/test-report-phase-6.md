@@ -1,6 +1,6 @@
 # Phase 6 Test Report
 
-> Historical phase-local result. See the [current aggregate baseline](test-report.md).
+> Historical phase-local result. See the [current aggregate baseline](../test-report.md).
 
 Phase 6 tests cover property parsing and validation, duplicate IDs, automatic assertion discovery, counterexample parsing, conservative no-counterexample labeling, skipped-verifier reporting, required-proof CI gates, artifact creation, and all Phase 1–5 regression behavior.
 

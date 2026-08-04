@@ -45,4 +45,4 @@ blockchain-auditor audit /path/to/project --profile multi-chain
 
 Plugins execute inside the auditor process and are therefore trusted code. The registry currently loads built-ins explicitly; it does not discover arbitrary packages automatically. A production plugin marketplace needs signature verification, compatibility metadata, permission declarations, and isolated execution before third-party discovery is enabled.
 
-See [plugin authoring](plugin-authoring.md) for the internal extension contract.
+See [plugin authoring](../plugin-authoring.md) for the internal extension contract.

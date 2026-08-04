@@ -23,8 +23,8 @@ This index is the entry point for Blockchain Auditor `1.2.0` documentation.
 
 ## Design history
 
-- Phases [3](phase-3.md), [4](phase-4.md), [5](phase-5.md), [6](phase-6.md), [7](phase-7.md), [8](phase-8.md), [9](phase-9.md), [10](phase-10.md), and [11](phase-11.md)
+- Phase documentation is grouped under [`docs/phases`](phases/index.md): [3](phases/phase-3.md), [4](phases/phase-4.md), [5](phases/phase-5.md), [6](phases/phase-6.md), [7](phases/phase-7.md), [8](phases/phase-8.md), [9](phases/phase-9.md), [10](phases/phase-10.md), and [11](phases/phase-11.md)
 - [Plugin authoring](plugin-authoring.md)
-- Historical phase test reports: [3](test-report-phase-3.md), [4](test-report-phase-4.md), [5](test-report-phase-5.md), [6](test-report-phase-6.md), [7–9](test-report-phases-7-9.md), and [10–11](test-report-phases-10-11.md)
+- Historical phase test reports: [3](phases/test-report-phase-3.md), [4](phases/test-report-phase-4.md), [5](phases/test-report-phase-5.md), [6](phases/test-report-phase-6.md), [7–9](phases/test-report-phases-7-9.md), and [10–11](phases/test-report-phases-10-11.md)
 
 Phase reports preserve what was verified when each phase landed. Use the consolidated test report for the current regression result.

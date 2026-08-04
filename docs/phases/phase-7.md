@@ -1,6 +1,6 @@
 # Phase 7: Economic and DeFi Simulation
 
-> Current in 1.2.0 as deterministic offline scenario analysis; it does not claim fork-based or live-market execution. See the [instruction guide](instruction-guide.md).
+> Current in 1.2.0 as deterministic offline scenario analysis; it does not claim fork-based or live-market execution. See the [instruction guide](../instruction-guide.md).
 
 Phase 7 adds deterministic, version-controlled offline scenario models:
 
@@ -9,7 +9,7 @@ Phase 7 adds deterministic, version-controlled offline scenario models:
 - governance voting-concentration analysis
 - bridge validator-quorum compromise analysis
 
-Scenarios live in `audit-scenarios.toml`; copy [the example](../audit-scenarios.example.toml). Use the protocol profile:
+Scenarios live in `audit-scenarios.toml`; copy [the example](../../audit-scenarios.example.toml). Use the protocol profile:
 
 ```bash
 blockchain-auditor audit /path/to/project --profile protocol

@@ -1,6 +1,6 @@
 # Phase 11: Evidence-Grounded Auditor Copilot
 
-> Implemented in 1.2.0 with deterministic fallback and no external model by default. See the [instruction guide](instruction-guide.md) for use and safety boundaries.
+> Implemented in 1.2.0 with deterministic fallback and no external model by default. See the [instruction guide](../instruction-guide.md) for use and safety boundaries.
 
 Phase 11 adds a provider-neutral, citation-first copilot:
 

@@ -1,6 +1,6 @@
 # Phase 8: Monitoring and Blockchain Intelligence Foundation
 
-> Current in 1.2.0 as rule configuration and evidence replay; live chain providers remain unconfigured. See the [instruction guide](instruction-guide.md).
+> Current in 1.2.0 as rule configuration and evidence replay; live chain providers remain unconfigured. See the [instruction guide](../instruction-guide.md).
 
 Phase 8 implements provider-neutral monitoring rules and deterministic JSONL replay for:
 
@@ -9,7 +9,7 @@ Phase 8 implements provider-neutral monitoring rules and deterministic JSONL rep
 - governance executions
 - stale oracle updates
 
-Rules live in `monitoring.toml`; see [the example](../monitoring.example.toml). Replay captured events with:
+Rules live in `monitoring.toml`; see [the example](../../monitoring.example.toml). Replay captured events with:
 
 ```bash
 blockchain-auditor monitor /path/to/project events.jsonl

@@ -1,6 +1,6 @@
 # Phase 5 Test Report
 
-> Historical phase-local result. See the [current aggregate baseline](test-report.md).
+> Historical phase-local result. See the [current aggregate baseline](../test-report.md).
 
 Phase 5 tests cover:
 

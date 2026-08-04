@@ -1,6 +1,6 @@
 # Phase 9: Full-Stack Security and Compliance Evidence
 
-> Current in 1.2.0 as repository-evidence analysis, not certification. See [requirements traceability](requirements-traceability.md).
+> Current in 1.2.0 as repository-evidence analysis, not certification. See [requirements traceability](../requirements-traceability.md).
 
 Phase 9 reviews repository evidence beyond contracts:
 

@@ -1,6 +1,6 @@
 # Phases 10–11 Test Report
 
-> Phase-local acceptance result. The consolidated current baseline and reproduction commands are maintained in [test-report.md](test-report.md).
+> Phase-local acceptance result. The consolidated current baseline and reproduction commands are maintained in [test-report.md](../test-report.md).
 
 Tests cover worker lease ownership and renewal, double-claim prevention, schema migration, consistent backup, webhook and repository SSRF policy, fail-closed OIDC behavior, grounded copilot citations, injection blocking, secret redaction, and evaluation recall. All prior phase regressions run in the same suite.
 

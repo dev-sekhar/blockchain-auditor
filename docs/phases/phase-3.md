@@ -1,6 +1,6 @@
 # Phase 3: Assisted Analysis and Remediation
 
-> Historical design note. This capability remains active in 1.2.0; authenticated tenancy arrived in Phase 4 and evidence-grounded Q&A in Phase 11. See the [instruction guide](instruction-guide.md) for current operation.
+> Historical design note. This capability remains active in 1.2.0; authenticated tenancy arrived in Phase 4 and evidence-grounded Q&A in Phase 11. See the [instruction guide](../instruction-guide.md) for current operation.
 
 ## Scope
 

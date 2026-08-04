@@ -1,6 +1,6 @@
 # Phase 4 Test Report
 
-> Historical phase-local result. See the [current aggregate baseline](test-report.md).
+> Historical phase-local result. See the [current aggregate baseline](../test-report.md).
 
 Phase 4 automated tests cover token authentication, tenant isolation, safe tenant identifiers, tenant-safe job lookup, atomic job claiming, interrupted-job recovery, persistent worker completion, tenant report paths, and operational audit events. Phase 1–3 regression tests run in the same suite.
 

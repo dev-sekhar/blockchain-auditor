@@ -161,7 +161,7 @@ The secret itself is never written into a report. Without it, manifests still re
 
 Every audit now writes `architecture.json`, `architecture.mmd`, and `assistance.json`. The dashboard exposes architecture and remediation sections. Supported mechanical fixes are displayed as unified-diff proposals with explicit review guardrails; the tool does not apply them.
 
-Review actions require an `auditor` or `admin` role and a note. Review events are append-only and hash chained. See [the Phase 3 design](docs/phase-3.md) and [test report](docs/test-report-phase-3.md).
+Review actions require an `auditor` or `admin` role and a note. Review events are append-only and hash chained. See [the Phase 3 design](docs/phases/phase-3.md) and [test report](docs/phases/test-report-phase-3.md).
 
 ## Phase 4 service mode
 
@@ -171,7 +171,7 @@ export BLOCKCHAIN_AUDITOR_TENANT_ID='acme'
 PYTHONPATH=src python3 -m blockchain_auditor serve --require-auth
 ```
 
-Audits submitted in the dashboard use a durable queue and tenant-scoped report directory. See [the Phase 4 design](docs/phase-4.md), [CODEX evaluation](docs/codex-evaluation.md), and [Phase 4 test report](docs/test-report-phase-4.md).
+Audits submitted in the dashboard use a durable queue and tenant-scoped report directory. See [the Phase 4 design](docs/phases/phase-4.md), [CODEX evaluation](docs/codex-evaluation.md), and [Phase 4 test report](docs/phases/test-report-phase-4.md).
 
 ## Phase 5 ecosystem plugins
 
@@ -180,7 +180,7 @@ PYTHONPATH=src python3 -m blockchain_auditor capabilities
 PYTHONPATH=src python3 -m blockchain_auditor audit /path/to/project --profile multi-chain
 ```
 
-Each run writes `coverage.json` so unsupported or unconfigured analysis stages remain visible. See [the Phase 5 design](docs/phase-5.md), [plugin authoring guide](docs/plugin-authoring.md), and [test report](docs/test-report-phase-5.md).
+Each run writes `coverage.json` so unsupported or unconfigured analysis stages remain visible. See [the Phase 5 design](docs/phases/phase-5.md), [plugin authoring guide](docs/plugin-authoring.md), and [test report](docs/phases/test-report-phase-5.md).
 
 ## Phase 6 property assurance
 
@@ -188,7 +188,7 @@ Each run writes `coverage.json` so unsupported or unconfigured analysis stages r
 PYTHONPATH=src python3 -m blockchain_auditor audit /path/to/project --profile assurance
 ```
 
-Phase 6 writes `verification.json` and can convert SMT counterexamples into release-blocking findings. See [the Phase 6 design](docs/phase-6.md), [example properties](audit-properties.example.toml), [test report](docs/test-report-phase-6.md), and [remaining delivery phases](docs/remaining-phases.md).
+Phase 6 writes `verification.json` and can convert SMT counterexamples into release-blocking findings. See [the Phase 6 design](docs/phases/phase-6.md), [example properties](audit-properties.example.toml), [test report](docs/phases/test-report-phase-6.md), and [remaining delivery phases](docs/remaining-phases.md).
 
 ## Phases 7–9
 
@@ -197,11 +197,11 @@ PYTHONPATH=src python3 -m blockchain_auditor audit /path/to/project --profile pr
 PYTHONPATH=src python3 -m blockchain_auditor monitor /path/to/project events.jsonl
 ```
 
-The audit now emits `simulation.json`, `monitoring.json`, `posture.json`, and `compliance.json`. See [Phase 7](docs/phase-7.md), [Phase 8](docs/phase-8.md), [Phase 9](docs/phase-9.md), and the [combined test report](docs/test-report-phases-7-9.md).
+The audit now emits `simulation.json`, `monitoring.json`, `posture.json`, and `compliance.json`. See [Phase 7](docs/phases/phase-7.md), [Phase 8](docs/phases/phase-8.md), [Phase 9](docs/phases/phase-9.md), and the [combined test report](docs/phases/test-report-phases-7-9.md).
 
 ## Phases 10–11
 
-Production operations and the evidence-grounded copilot are documented in [Phase 10](docs/phase-10.md), [Phase 11](docs/phase-11.md), the [production runbook](docs/production-runbook.md), and the [combined test report](docs/test-report-phases-10-11.md).
+Production operations and the evidence-grounded copilot are documented in [Phase 10](docs/phases/phase-10.md), [Phase 11](docs/phases/phase-11.md), the [production runbook](docs/production-runbook.md), and the [combined test report](docs/phases/test-report-phases-10-11.md).
 
 ## Phase roadmap
 

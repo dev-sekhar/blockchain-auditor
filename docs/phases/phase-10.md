@@ -1,6 +1,6 @@
 # Phase 10: Production Service and Integration Boundaries
 
-> Implemented as a production-oriented foundation in 1.2.0. Complete the external gates in the [production runbook](production-runbook.md) before public or untrusted-tenant exposure.
+> Implemented as a production-oriented foundation in 1.2.0. Complete the external gates in the [production runbook](../production-runbook.md) before public or untrusted-tenant exposure.
 
 Phase 10 adds production-oriented operational controls:
 

@@ -1,6 +1,6 @@
 # Phase 4: Persistent Multi-Tenant Service Foundation
 
-> Historical design note. Phase 10 later added leased jobs, operational endpoints, backups, and production policies. SQLite/in-process workers remain a single-host foundation; see the [production runbook](production-runbook.md).
+> Historical design note. Phase 10 later added leased jobs, operational endpoints, backups, and production policies. SQLite/in-process workers remain a single-host foundation; see the [production runbook](../production-runbook.md).
 
 Phase 4 turns the local dashboard into a persistent queued service while retaining local development mode.
 

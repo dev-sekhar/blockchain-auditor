@@ -1,6 +1,6 @@
 # Phase 6: Formal Verification and Property Assurance
 
-> Current in 1.2.0 as a bounded Solidity SMT foundation. See the [instruction guide](instruction-guide.md) for configuration and [requirements traceability](requirements-traceability.md) for unsupported proof scope.
+> Current in 1.2.0 as a bounded Solidity SMT foundation. See the [instruction guide](../instruction-guide.md) for configuration and [requirements traceability](../requirements-traceability.md) for unsupported proof scope.
 
 Phase 6 adds a conservative property-assurance pipeline for Solidity.
 
@@ -22,7 +22,7 @@ blockchain-auditor audit /path/to/project --profile assurance
 
 Container execution requires a reviewed `solc_image` already present locally. Images are never pulled implicitly. Native `solc` requires both `execution_mode = "native"` and `allow_native_execution = true`.
 
-Copy [the example property file](../audit-properties.example.toml) into a project as `audit-properties.toml` and link SMT assertions to their source file and line. Design invariants without a source assertion are reported as `declared_unlinked`; the tool does not pretend they were verified.
+Copy [the example property file](../../audit-properties.example.toml) into a project as `audit-properties.toml` and link SMT assertions to their source file and line. Design invariants without a source assertion are reported as `declared_unlinked`; the tool does not pretend they were verified.
 
 ## Interpretation
 

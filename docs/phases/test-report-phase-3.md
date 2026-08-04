@@ -1,6 +1,6 @@
 # Phase 3 Test Report
 
-> Historical phase-local result. See the [current aggregate baseline](test-report.md).
+> Historical phase-local result. See the [current aggregate baseline](../test-report.md).
 
 ## Automated coverage
 
