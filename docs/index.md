@@ -4,6 +4,7 @@ This index is the entry point for Blockchain Auditor `1.2.0` documentation.
 
 ## Use and operate the tool
 
+- [Getting started](getting-started.md) — installation, source-only execution, audits, dashboard use, and report access
 - [Instruction guide](instruction-guide.md) — installation, audits, dashboard, reports, service operation, backup, CI, and troubleshooting
 - [Production runbook](production-runbook.md) — deployment gates, health checks, backup/restore, and incident response
 - [Configuration example](../blockchain-auditor.example.toml)

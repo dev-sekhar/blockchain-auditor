@@ -2,6 +2,8 @@
 
 This guide covers the supported `1.2.0` workflow: provide a local project path or public GitHub repository URL, run an audit, inspect the dashboard, trace issues, and retain timestamped reports. Commands assume Python 3.11 or newer and are run from this repository.
 
+For the shortest end-to-end setup, including exact report-access steps, start with [Getting Started](getting-started.md).
+
 ## 1. Install or run from source
 
 Run without installing:

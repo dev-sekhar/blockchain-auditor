@@ -1,6 +1,6 @@
 # Blockchain Auditor
 
-A local-first audit orchestrator for blockchain projects. Version 1.2.0 accepts a local project path or public GitHub repository URL, fingerprints its source, runs compatible analysis engines, normalizes issues, and writes timestamped reports with issue traceability. Start with the [instruction guide](docs/instruction-guide.md) or [documentation index](docs/index.md).
+A local-first audit orchestrator for blockchain projects. Version 1.2.0 accepts a local project path or public GitHub repository URL, fingerprints its source, runs compatible analysis engines, normalizes issues, and writes timestamped reports with issue traceability. Start with [Getting Started](docs/getting-started.md), the [complete instruction guide](docs/instruction-guide.md), or the [documentation index](docs/index.md).
 
 ## Current capabilities
 
@@ -46,6 +46,8 @@ PYTHONPATH=src python3 -m blockchain_auditor serve
 ```
 
 Open <http://127.0.0.1:8765>. The dashboard binds only to localhost by default. It can launch an audit from a project path accessible to the local process.
+
+See [Getting Started](docs/getting-started.md) for the complete source-only workflow and report-access instructions.
 
 ## Install locally
 
@@ -93,6 +95,14 @@ Reports are stored as:
 ```
 
 The tool never commits reports or modifies the audited project. Teams may version the report store separately or intentionally commit it to their repository.
+
+The audit command prints the exact `report.html` path. You can open it directly or browse the report store with:
+
+```bash
+python3 -m http.server 8080 --directory .audit-reports
+```
+
+Then open <http://127.0.0.1:8080>. Reports created through the dashboard are available from its **Reports** section and stored under `.audit-reports/tenants/<tenant>/`.
 
 GitHub URL audits support public repositories on `github.com` over HTTPS. The default branch is shallow-cloned without submodules into a disposable checkout. Reports retain the URL and exact audited commit SHA; the checkout is removed after the run. Private repositories and embedded credentials are not accepted.
 
